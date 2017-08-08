@@ -1,0 +1,14 @@
+{% extends 'books/base.html' %}
+{% block title %} Here are teh starz! {% endblock title %}
+
+{% block content %}
+
+<ul>
+    {% for person in person_list %}
+    <li>{{ person}}</li>
+    {% empty %}
+    <li>NO PPL IN DA HAOUZZZ</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

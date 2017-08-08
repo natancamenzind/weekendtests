@@ -1,0 +1,14 @@
+{% extends 'books/base.html' %}
+{% block title %} Here are teh moviez! {% endblock title %}
+
+{% block content %}
+
+<ul>
+    {% for movie in movie_list %}
+    <li>{{movie.title}} by {{movie.director}}</li>
+    {% empty %}
+    <li>NO MOVIES</li>
+</ul>
+    {% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'books/base.html' %}
+{% block title %} Some movie fallows {% endblock title %}
+
+{% block content %}
+<ul>
+    {% for person in after_1945 %}
+    <li>{{ person }}</li>
+    {% empty %}
+    <li>NO PPL</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

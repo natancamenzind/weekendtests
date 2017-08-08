@@ -1,0 +1,11 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+<h1>{{ object.title }}</h1>
+<h2>by {{ object.author }}</h2>
+<p>publisher: {{ object.publisher }}</p>
+<p>genre: {{ object.get_genre_display }}</p>
+<p>{{ now|time }}</p>
+
+{% endblock %}

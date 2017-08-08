@@ -1,0 +1,21 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+<h1>All teh bookz</h1>
+
+<ol>
+    {% for object in object_list %}
+    <li><b>{{ object.title}}</b> by {{ object.author }} ({{ object.get_genre_display }})</li>
+    {% empty %}
+    <p>No books to show</p>
+    {% endfor %}
+
+</ol>
+
+    <form action="{% url 'book-list' %}" method="GET">
+        <input type="text" name="q" />
+        <button type="submit">search</button>
+    </form>
+
+{% endblock %}
